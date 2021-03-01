@@ -6,5 +6,8 @@ How to use:
 4. Add the component 'strategicFS' to the page
 5. Activate and Save the page
 
+Screenshot:
+![image](https://user-images.githubusercontent.com/11876166/109458708-500ace80-7a2b-11eb-8541-9ab6dfe720ca.png)
+
 Video Link:
 
