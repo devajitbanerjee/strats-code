@@ -120,7 +120,6 @@ export default class BasicDatatable extends LightningElement {
                 this.lastID = this.data[i]['id']
             }
         }
-        console.log(this.lastID);
         this.totalBalance = calculatedBalance;
     }
     // Reusable method to trigger a Toast notification event
