@@ -30,14 +30,14 @@
                 <lightning-input type="text" name="lastNameInput" label="Last Name" required></lightning-input>
                 <lightning-input type="number" name="minPayInput" label="Min Pay %" required></lightning-input>
                 <lightning-input type="number" name="balanceInput" label="Balance" required></lightning-input>
-                <lightning-button-group id="saveCancelButtons" class="slds-align_absolute-center slds-p-top_small">
+                <lightning-button-group id="saveCancelButtons" class="slds-align_absolute-left slds-p-top_small">
                     <lightning-button label="Save" variant="brand" icon-name="utility:save" onclick={handleSaveRow}></lightning-button>
                     <lightning-button label="Cancel" variant="destructive" icon-name="utility:delete" onclick={handleCancelRow}></lightning-button>
                 </lightning-button-group>
             </div>
         </template>
         <template if:false={showInputSection}>
-            <lightning-button-group id="addRemoveButtons" class="slds-align_absolute-center slds-p-top_small">
+            <lightning-button-group id="addRemoveButtons" class="slds-align_absolute-left  slds-p-top_small">
                 <lightning-button label="Add Debt" variant="brand" icon-name="utility:edit" onclick={handleAddRow}></lightning-button>
                 <lightning-button label="Remove Debt" variant="destructive" icon-name="utility:delete" onclick={handleRemoveRow}></lightning-button>
             </lightning-button-group>
