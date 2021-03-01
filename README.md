@@ -9,5 +9,5 @@ How to use:
 Screenshot:
 ![image](https://user-images.githubusercontent.com/11876166/109458708-500ace80-7a2b-11eb-8541-9ab6dfe720ca.png)
 
-Video Link:
+Video Link: https://vimeo.com/user134744737/download/518009648/a035bfef22
 
