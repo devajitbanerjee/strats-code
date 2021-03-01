@@ -37,7 +37,7 @@
             </div>
         </template>
         <template if:false={showInputSection}>
-            <lightning-button-group id="addRemoveButtons" class="slds-align_absolute-left  slds-p-top_small">
+            <lightning-button-group id="addRemoveButtons" class="slds-align_absolute-left slds-p-left_small slds-p-top_small">
                 <lightning-button label="Add Debt" variant="brand" icon-name="utility:edit" onclick={handleAddRow}></lightning-button>
                 <lightning-button label="Remove Debt" variant="destructive" icon-name="utility:delete" onclick={handleRemoveRow}></lightning-button>
             </lightning-button-group>
