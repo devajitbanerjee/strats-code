@@ -1,0 +1,45 @@
+<template>
+    <lightning-card>
+        <div slot="title" class="slds-align_absolute-center">
+            <p>Debt Ledger</p>
+        </div>
+        <div slot="footer">
+            <div class="slds-box slds-box_small slds-clearfix">
+                <span class="slds-float_left slds-text-heading_large">Total</span>
+                <span class="slds-float_right slds-text-heading_large">
+                    <lightning-formatted-number value={totalBalance} maximum-fraction-digits="2" minimum-fraction-digits="2" >
+                    </lightning-formatted-number>
+                </span>
+            </div>
+            <div class="slds-box slds-box_small slds-clearfix">
+                <span class="slds-float_left">Total Row Count: <lightning-badge label={data.length}></lightning-badge></span>
+                <span class="slds-float_left">Check Row Count: <lightning-badge label={selectedData.length}></lightning-badge></span>
+            </div>
+        </div>
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                onrowselection={handleRowSelection}>
+        </lightning-datatable>
+        <template if:true={showInputSection}>
+            <div id="newInputContainer" class="slds-box slds-clearfix">
+                <lightning-input type="text" name="creditorInput" label="Creditor" required></lightning-input>
+                <lightning-input type="text" name="firstNameInput" label="First Name" required></lightning-input>
+                <lightning-input type="text" name="lastNameInput" label="Last Name" required></lightning-input>
+                <lightning-input type="number" name="minPayInput" label="Min Pay %" required></lightning-input>
+                <lightning-input type="number" name="balanceInput" label="Balance" required></lightning-input>
+                <lightning-button-group id="saveCancelButtons" class="slds-align_absolute-center slds-p-top_small">
+                    <lightning-button label="Save" variant="brand" icon-name="utility:save" onclick={handleSaveRow}></lightning-button>
+                    <lightning-button label="Cancel" variant="destructive" icon-name="utility:delete" onclick={handleCancelRow}></lightning-button>
+                </lightning-button-group>
+            </div>
+        </template>
+        <template if:false={showInputSection}>
+            <lightning-button-group id="addRemoveButtons" class="slds-align_absolute-center slds-p-top_small">
+                <lightning-button label="Add Debt" variant="brand" icon-name="utility:edit" onclick={handleAddRow}></lightning-button>
+                <lightning-button label="Remove Debt" variant="destructive" icon-name="utility:delete" onclick={handleRemoveRow}></lightning-button>
+            </lightning-button-group>
+        </template>
+    </lightning-card>
+</template>
